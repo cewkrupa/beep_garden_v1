@@ -4,8 +4,7 @@ var gMinorPentatonic = [98, 116.54, 130.81, 146.83, 174.61, 196, 233.08, 261.63,
 function beepOnClick(event) {
     var x = event.clientX;
     var y = event.clientY;
-    console.log("X: " + x + "   Y: " + y);
-    // beep(500, x+y, 1, "sine");
+
     var myBeep = new Pizzicato.Sound({
         source: 'wave',
         options: {
@@ -29,7 +28,6 @@ function setBGColor(x, y) {
     var r = normalize(x, 255);
     var g = normalize(y, 255);
     var b = normalize(x+y, 255);
-    console.log("rgb: " + r + ", " + g + ", " + b);
 
     document.body.style.backgroundColor = 'rgb(' + [r,g,b].join(',') + ')';
 }
